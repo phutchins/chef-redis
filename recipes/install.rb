@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+Chef::Log.info("Redis Install Type: #{node.redis.install_type}")
+
 case node.redis.install_type
 when "package"
   include_recipe "redis::server_package"

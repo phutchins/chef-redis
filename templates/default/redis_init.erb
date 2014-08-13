@@ -22,6 +22,7 @@
 
 REDISPORT=<%= @port %>
 
+# TEST: <%= node.redis.install_type %>
 <% if node.redis.install_type == "source" %>
 EXEC=<%= node.redis.dst_dir %>/bin/redis-server
 CLIEXEC=<%= node.redis.dst_dir %>/bin/redis-cli
